@@ -1,0 +1,345 @@
+/**************************/
+/*     General Styles     */
+/**************************/
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body,
+p {
+  color: #6c717b;
+  font: 400 1rem/1.625rem "Open Sans", sans-serif;
+}
+
+h1 {
+  color: #191e47;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  letter-spacing: -0.4px;
+}
+
+a {
+  color: #6c717b;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #6c717b;
+  text-decoration: underline;
+}
+
+.btn-outline-lg {
+  display: inline-block;
+  padding: 1.625rem 2.625rem 1.625rem 2.625rem;
+  border: 1px solid #cc2973;
+  border-radius: 30px;
+  background-color: transparent;
+  color: #cc2973;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 0;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-outline-lg:hover {
+  background-color: #cc2973;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/**********************/
+/*     Navigation     */
+/**********************/
+.navbar {
+  background-color: #ffffff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.05);
+}
+
+.navbar .navbar-brand {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.navbar .logo-image img {
+  width: 124px;
+  height: 32px;
+}
+
+.navbar .logo-text {
+  color: #191e47;
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 1rem;
+  text-decoration: none;
+}
+
+.offcanvas-collapse {
+  position: fixed;
+  top: 3.25rem; /* adjusts the height between the top of the page and the offcanvas menu */
+  bottom: 0;
+  left: 100%;
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  overflow-y: auto;
+  visibility: hidden;
+  background-color: #ffffff;
+  transition: visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out,
+    -webkit-transform 0.3s ease-in-out;
+}
+
+.offcanvas-collapse.open {
+  visibility: visible;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.navbar .navbar-nav {
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.navbar .nav-item .nav-link {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  color: #191e47;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+/*****************/
+/*    Header     */
+/*****************/
+.header {
+  position: relative;
+  overflow: hidden;
+  padding-top: 8rem;
+  padding-bottom: 4em;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.header .decoration-star {
+  position: absolute;
+  top: 80px;
+  left: -100px;
+  width: 200px;
+  opacity: 0.7;
+}
+
+.header .decoration-star-2 {
+  position: absolute;
+  top: 80px;
+  right: -100px;
+  width: 200px;
+  opacity: 0.7;
+}
+
+.header div[class*="col"] {
+  /* selects all elements which have classes starting with col */
+  /* needed so that the absolute positioned decoration stays behind */
+  position: relative;
+}
+
+.header .h1-large {
+  margin-bottom: 1.75rem;
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+.header .p-large {
+  margin-bottom: 2.25rem;
+}
+
+.header .btn-solid-lg,
+.header .btn-outline-lg {
+  margin-right: 0.25rem;
+  margin-bottom: 1.25rem;
+  margin-left: 0.25rem;
+}
+
+.header .image-container {
+  margin-top: 5rem;
+}
+
+/*************************/
+/*     Media Queries     */
+/*************************/
+/* Min-width 768px */
+@media (min-width: 768px) {
+  /* Header */
+  .header {
+    padding-top: 11rem;
+    padding-bottom: 5em;
+  }
+
+  .header .decoration-star {
+    top: 100px;
+    left: -150px;
+    width: 300px;
+  }
+
+  .header .decoration-star-2 {
+    top: 140px;
+    right: -200px;
+    width: 400px;
+  }
+  /* end of header */
+}
+/* end of min-width 768px */
+
+/* Min-width 992px */
+@media (min-width: 992px) {
+  /* General Styles */
+  .h2-heading {
+    width: 35.25rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .p-heading {
+    width: 46rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  /* end of general styles */
+
+  /* Navigation */
+  .navbar {
+    padding-top: 1.75rem;
+    background-color: #ffffff;
+    box-shadow: none;
+    transition: all 0.2s;
+  }
+
+  .navbar.extra-page {
+    padding-top: 0.5rem;
+  }
+
+  .navbar.top-nav-collapse {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  .offcanvas-collapse {
+    position: static;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    padding-right: 0;
+    padding-left: 0;
+    background-color: transparent;
+    overflow-y: visible;
+    visibility: visible;
+  }
+
+  .offcanvas-collapse.open {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  .navbar .navbar-nav {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .navbar .nav-item .nav-link {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+
+  .navbar .dropdown-menu {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar .dropdown-divider {
+    width: 90%;
+  }
+
+  .navbar .nav-item .btn-outline-sm {
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+  /* end of navigation */
+
+  /* Header */
+  .header {
+    text-align: left;
+  }
+
+  .header .text-container {
+    margin-top: 4rem;
+  }
+
+  .header .image-container {
+    margin-top: 0;
+  }
+
+  .header .btn-solid-lg,
+  .header .btn-outline-lg {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .header .btn-solid-lg {
+    margin-right: 0.5rem;
+  }
+  /* end of header */
+}
+/* end of min-width 992px */
+
+/* Min-width 1200px */
+@media (min-width: 1200px) {
+  /* General Styles */
+  .container {
+    max-width: 1140px;
+  }
+  /* end of general styles */
+
+  /* Header */
+  .header {
+    padding-top: 12rem;
+    padding-bottom: 6rem;
+  }
+
+  .header .text-container {
+    margin-top: 6.5rem;
+  }
+
+  .header .decoration-star {
+    top: 200px;
+    left: -200px;
+    width: 500px;
+  }
+
+  .header .decoration-star-2 {
+    top: 150px;
+    right: -200px;
+    width: 600px;
+  }
+
+  .header .h1-large {
+    font-size: 4.25rem;
+    line-height: 4.875rem;
+  }
+
+  .header .image-container {
+    text-align: right;
+  }
+  /* end of header */
+}
+/* end of min-width 1200px */
