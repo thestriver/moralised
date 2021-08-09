@@ -30,7 +30,7 @@ function App() {
             aria-label="Main navigation"
           >
             <div class="container">
-              <a class="navbar-brand logo-text py-3" href="#!">
+              <a class="navbar-brand logo-text py-3" href="/">
                 Moralised
               </a>
             </div>

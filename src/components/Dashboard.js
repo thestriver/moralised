@@ -40,7 +40,7 @@ export default function Dashboard() {
         aria-label="Main navigation"
       >
         <div class="container">
-          <a class="navbar-brand logo-text" href="#!">
+          <a class="navbar-brand logo-text" href="/">
             Moralised
           </a>
           <span class="nav-item">
