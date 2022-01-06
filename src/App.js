@@ -45,7 +45,7 @@ function App() {
                   <div class="text-container">
                     <h1 class="h1-large">Moralised</h1>
                     <p class="p-large">
-                      Your minimalist ETH dashboard. See your last transactions
+                      Your minimalist ETH dashboard powered by Moralis. See your last transactions
                       and tokens balance.
                     </p>
                     <button class="btn-outline-lg" onClick={onLogin}>
